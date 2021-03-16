@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03</title>
+</head>
+<body>
+
+    <h2>JavaScript</h2>
+
+    <h5>No 10</h5>
+
+    <div>
+        <p>1st Number: <input id="fNumber" type="number"></p>
+        <p>2nd Number: <input id="lNumber" type="number"></p>
+        <button onclick="multiply()" value="multi">Multiply</button>
+        <button onclick="divide()" value="div">Divide</button>
+        <p>The result is: <span id="result"></span></p>
+    </div>
+
+
+    
+
+    <script>
+
+        function multiply() {
+            var num01 = document.getElementById("fNumber").value;
+            var num02 = document.getElementById("lNumber").value;
+            document.getElementById("result").innerHTML = num01 * num02;
+        }
+
+        function divide() {
+            var num01 = document.getElementById("fNumber").value;
+            var num02 = document.getElementById("lNumber").value;
+            document.getElementById("result").innerHTML = num01 / num02;
+        }
+
+    </script>
+
+
+
+<h5>No 11</h5>
+
+<div>
+    <p>Celsius: <input id="cel" type="number"></p>
+    <button onclick="ctof()" value="btn01">Result</button> <span>The answer is: <span id="result01"></span></span>
+    <p>Fahrenheit: <input id="far" type="number"></p>
+    <button onclick="ftoc()">Result</button> <span>The answer is: <span id="result02"></span></span>
+</div>
+
+<script>
+    function ctof() {
+        var x = document.getElementById("cel").value;
+        var r1 = ((x * 9 / 5) + 32);
+
+        document.getElementById("result01").innerHTML = r1 +" Degree Fahrenheit.";
+
+        
+    }
+
+    function ftoc(){
+        var y = document.getElementById("far").value;
+        var r2 = ((y-32)*5/9);
+        document.getElementById("result02").innerHTML = r2 +" Degree Celsius.";
+
+    }
+</script>
+
+
+
+
+
+<h5>No 12</h5>
+
+<div>
+    Get the website URL.
+</div>
+<button onclick="getURL()" id="click">Click me</button>
+<p>URL is: <span id="url"></span></p>
+
+<script>
+    function getURL() {
+        document.getElementById("url").innerHTML = document.URL;
+    }
+</script>
+
+
+</body>
+</html>
